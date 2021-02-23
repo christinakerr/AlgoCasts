@@ -8,18 +8,14 @@
 //   vowels('Why?') --> 0
 
 function vowels(str) {
-    let vowels = 0;
-    for (letter of str){
-        if (letter.toLowerCase() === "a" ||
-        letter.toLowerCase() === "e" ||
-        letter.toLowerCase() === "i" ||
-        letter.toLowerCase() === "o" ||
-        letter.toLowerCase() === "u"
-        ) {
-            vowels++;
+    let count = 0;
+    const vowelList = ["a", "e", "i", "o", "u"]
+    for (let letter of str.toLowerCase()){
+        if (vowelList.includes(letter)) {
+            count++;
         }
     }
-    return vowels;
+    return count;
 }
 
 module.exports = vowels;
